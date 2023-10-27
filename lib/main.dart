@@ -1,3 +1,5 @@
+import 'package:FoodDeliveryApp/pages/Cart_Page.dart';
+import 'package:FoodDeliveryApp/pages/Item_Page.dart';
 import 'package:flutter/material.dart';
 import 'package:FoodDeliveryApp/pages/Home_Page.dart';
 
@@ -18,6 +20,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         "/": (context) => const HomePage(),
+        "cartPage": (context) => const CartPage(),
+        "itemPage": (context) => const ItemPage(),
       },
     );
   }

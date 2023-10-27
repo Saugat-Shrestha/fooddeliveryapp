@@ -15,7 +15,9 @@ class TopBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Scaffold.of(context).openDrawer();
+            },
             child: Container(
               padding: EdgeInsets.all(8),
               decoration: BoxDecoration(
