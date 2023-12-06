@@ -16,7 +16,15 @@ class ItemPage extends StatelessWidget {
         padding: const EdgeInsets.only(top: 5),
         child: ListView(
           children: [
-            TopBar(),
+            //  TopBar(),
+            Container(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text("Go back"),
+              ),
+            ),
             Padding(
               padding: EdgeInsets.all(16),
               child: Image.asset(

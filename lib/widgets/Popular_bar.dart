@@ -1,3 +1,4 @@
+import 'package:FoodDeliveryApp/pages/Item_Page.dart';
 import 'package:flutter/material.dart';
 
 class PopularBar extends StatelessWidget {
@@ -14,7 +15,7 @@ class PopularBar extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Container(
                 width: 180,
-                height: 245,
+                height: 265,
                 padding: EdgeInsets.all(8),
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -34,7 +35,12 @@ class PopularBar extends StatelessWidget {
                     children: [
                       InkWell(
                         onTap: () {
-                          Navigator.pushNamed(context, "itemPage");
+                          // Navigator.pushNamed(context, "itemPage");
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ItemPage()),
+                          );
                         },
                         child: Container(
                           alignment: Alignment.center,
@@ -53,7 +59,7 @@ class PopularBar extends StatelessWidget {
                         height: 4,
                       ),
                       Text(
-                        "Taste Our Hot Burger",
+                        "Taste Our Hot Burgers ",
                         style: TextStyle(
                           fontSize: 15,
                         ),
@@ -86,7 +92,7 @@ class PopularBar extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Container(
                 width: 180,
-                height: 245,
+                height: 265,
                 padding: EdgeInsets.all(8),
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -120,7 +126,7 @@ class PopularBar extends StatelessWidget {
                         height: 4,
                       ),
                       Text(
-                        "Taste Our Hot Burger",
+                        "Taste Our Hot Burgers",
                         style: TextStyle(
                           fontSize: 15,
                         ),
@@ -153,7 +159,7 @@ class PopularBar extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Container(
                 width: 180,
-                height: 245,
+                height: 265,
                 padding: EdgeInsets.all(8),
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -187,7 +193,7 @@ class PopularBar extends StatelessWidget {
                         height: 4,
                       ),
                       Text(
-                        "Taste Our Hot Burger",
+                        "Taste Our Hot Burgers",
                         style: TextStyle(
                           fontSize: 15,
                         ),
