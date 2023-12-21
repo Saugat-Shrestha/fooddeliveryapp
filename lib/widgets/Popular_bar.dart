@@ -4,6 +4,13 @@ import 'package:flutter/material.dart';
 class PopularBar extends StatelessWidget {
   const PopularBar({super.key});
 
+  void _openProduct(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const ItemPage()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -33,20 +40,19 @@ class PopularBar extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      InkWell(
+                      GestureDetector(
                         onTap: () {
                           // Navigator.pushNamed(context, "itemPage");
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const ItemPage()),
-                          );
+                          _openProduct(context);
                         },
-                        child: Container(
-                          alignment: Alignment.center,
-                          child: Image.asset(
-                            "assets/images/burger.png",
-                            height: 130,
+                        child: Hero(
+                          tag: Image,
+                          child: Container(
+                            alignment: Alignment.center,
+                            child: Image.asset(
+                              "assets/images/burger.png",
+                              height: 130,
+                            ),
                           ),
                         ),
                       ),

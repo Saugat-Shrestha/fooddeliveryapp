@@ -27,9 +27,12 @@ class ItemPage extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(16),
-              child: Image.asset(
-                "assets/images/pizza.png",
-                height: 300,
+              child: Hero(
+                tag: Image,
+                child: Image.asset(
+                  "assets/images/burger.png",
+                  height: 300,
+                ),
               ),
             ),
             Arc(
